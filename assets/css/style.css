@@ -1,0 +1,322 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  --font-size-16px: 16px;
+  --font-weight-600: 600;
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: var(--font-size-16px);
+  gap: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  width: 3128px;
+  height: 3128px;
+  border-radius: 50%;
+  background-color: rgba(251, 250, 254, 1);
+  top: -2100px;
+  left: -687px;
+  z-index: -1;
+  border: 1px solid rgba(240, 235, 250, 1);
+}
+
+.teamFlow {
+  font-size: 24px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  letter-spacing: -0.06em;
+}
+
+.dot {
+  color: rgba(121, 76, 255, 1);
+}
+
+.arrow {
+  font-size: small;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 50px;
+  min-width: 600px;
+  margin-top: 40px;
+}
+
+.menuChoiser {
+  display: flex;
+  flex-direction: inherit;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+  padding-left: 110px;
+}
+
+.log {
+  display: flex;
+  flex-direction: inherit;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.menuButton {
+  color: rgba(121, 76, 255, 1);
+  background-color: rgba(236, 229, 255, 1);
+  border-radius: 4px;
+  padding: 16px 24px;
+  border: none;
+  font-size: var(--font-size-16px);
+}
+
+.menuButton:hover {
+  cursor: pointer;
+}
+
+.rowSave {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.getAccount {
+  border: 1px solid transparent;
+  padding: 8px 16px;
+  background-color: rgba(129, 196, 59, 1);
+  color: rgba(255, 255, 255, 1);
+  border-radius: 100px;
+  z-index: 1;
+  font-size: var(--font-size-16px);
+}
+
+.getAccount59 {
+  padding: 8px 16px 8px 70px;
+  background-color: rgba(242, 249, 235, 1);
+  color: rgba(53, 65, 75, 1);
+  border-radius: 100px;
+  position: relative;
+  margin-left: -60px;
+  font-size: var(--font-size-16px);
+}
+
+.mainPhrase {
+  font-size: 64px;
+  color: rgba(53, 65, 75, 1);
+  max-width: 760px;
+}
+
+.descriptionHeader {
+  font-size: var(--font-size-16px);
+  color: rgba(78, 90, 101, 1);
+  max-width: 505px;
+  line-height: 24px;
+}
+
+.inputButton {
+  display: flex;
+  flex-direction: row;
+}
+
+.input {
+  border: 1px solid rgba(225, 229, 234, 1);
+  background-color: rgba(255, 255, 255, 1);
+  padding: 18px 100px 18px 24px;
+  font-size: var(--font-size-16px);
+  border-radius: 4px 0px 0px 4px;
+}
+
+.tryItFree {
+  border: 1px solid transparent;
+  background-color: rgba(121, 76, 255, 1);
+  padding: 18px 45px;
+  font-size: var(--font-size-16px);
+  border-radius: 0px 4px 4px 0px;
+  color: rgba(255, 255, 255, 1);
+  margin-left: -6px;
+}
+
+.tryItFree:hover {
+  cursor: pointer;
+}
+
+.mainPageImg {
+  max-width: 920px;
+  width: 100%;
+  height: auto;
+}
+
+.headerBestTeams {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 110px;
+}
+
+.headerBestTeams img {
+  width: 80px;
+}
+
+.bold {
+    font-weight:  var(--font-weight-600);
+}
+
+.Timeline {
+  display: grid;
+  grid-template-columns: minmax(400px, 650px) minmax(200px, 1fr);
+  gap: 80px;
+  grid-template-rows: 1fr;
+  grid-template-areas: "imgTimeline description";
+  background-color: rgba(251, 250, 254, 1);
+  margin-top: 100px;
+  padding: 100px 170px;
+}
+
+.imgTimeline {
+  grid-area: imgTimeline;
+  min-width: 650px;
+  height: auto;
+  grid-column: 1 / 2;
+  align-items: center;
+}
+
+
+.description {
+  grid-column: 2 / 3;
+  grid-area: description;
+
+  max-width: 100%;
+  font-size: var(--font-size-16px);
+}
+
+.text :nth-child(2n + 1) {
+  font-size: 18px;
+  font-weight: var(--font-weight-600);
+  gap: 20px;
+}
+
+.text:hover {
+  background-color: rgba(246, 243, 252, 1);
+  max-width: 400px;
+  border-bottom: none;
+  border-left: 8px solid rgba(121, 76, 255, 1) ;
+}
+
+.text {
+  padding: 26px 52px;
+  max-width: 400px;
+  border-bottom: 1px solid rgba(240, 235, 250, 1);
+  line-height: 24px;
+  border-left: 8px solid transparent;
+}
+
+.textIn {
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 1230px) {
+  .Timeline {
+    display: grid; /*тут хотіла уточнити чи потрібно писати це*/
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "imgTimeline"
+      "description";
+    justify-content: center;
+    text-align: center;
+  }
+
+  .imgTimeline {
+    display: grid;
+    min-width: 450px;
+    width: 100%;
+    height: auto;
+    
+  }
+
+  .description {
+    display: grid;
+    justify-items: center;
+    min-width: 350px;
+    width: 100%;
+  }
+
+  .text {
+    border-bottom: 8px solid transparent;
+    border-left: none;
+  }
+
+  .text:hover {
+    border-left: none;
+    border-bottom: 8px solid rgba(121, 76, 255, 1) ;
+  }
+}
+
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(3, auto) ;
+    grid-template-rows: 40px 1fr 1fr;
+    padding: 100px 165px;
+    justify-items: center;
+}
+
+
+.easier {
+    grid-column: 1 / 4;
+    align-content: center;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: rgba(53, 65, 75, 1);
+}
+
+
+.icons {
+    width: 64px;
+    padding-bottom: 24px;
+    padding-top: 80px;
+}
+
+.mainHeaders {
+    font-size: 18px;
+    font-weight: var(--font-weight-600);
+    color: rgba(53, 65, 75, 1);
+}
+
+.mainDesc {
+    font-size: var(--font-size-16px);
+    line-height: 24px;
+    padding-top: 8px;
+    max-width: 300px;
+    color: rgba(78, 90, 101, 1);
+}
+
+@media screen and (max-width: 1230px) {
+    
+/* .main {
+    display: grid;
+    grid-template-columns: repeat(2, auto) ;
+    grid-template-rows: 40px 1fr 1fr 1fr;
+} */
+    
+}
