@@ -5,7 +5,10 @@
 html {
   font-family: sans-serif;
   --font-size-16px: 16px;
+  --font-size-18px: 18px;
   --font-weight-600: 600;
+  --color-darker-grey: rgba(53, 65, 75, 1);
+  --color-lighter-grey: rgba(78, 90, 101, 1);
   background-color: white;
 }
 
@@ -57,18 +60,18 @@ html {
   text-align: center;
   width: 100%;
   margin-bottom: 50px;
-  min-width: 600px;
   margin-top: 40px;
 }
 
 .menuChoiser {
   display: flex;
   flex-direction: inherit;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-align: center;
   gap: 50px;
-  padding-left: 110px;
+  color: var(--color-darker-grey);
+  font-size: var(--font-size-16px);
 }
 
 .log {
@@ -85,6 +88,11 @@ html {
   border-radius: 4px;
   padding: 16px 24px;
   border: none;
+  font-size: var(--font-size-16px);
+}
+
+.logIn {
+  color: var(--color-darker-grey);
   font-size: var(--font-size-16px);
 }
 
@@ -119,17 +127,22 @@ html {
   font-size: var(--font-size-16px);
 }
 
+.rightArrow {
+  font-size: 10px;
+}
+
 .mainPhrase {
   font-size: 64px;
-  color: rgba(53, 65, 75, 1);
+  color: var(--color-darker-grey);
   max-width: 760px;
 }
 
 .descriptionHeader {
   font-size: var(--font-size-16px);
-  color: rgba(78, 90, 101, 1);
+  color: var(--color-lighter-grey);
   max-width: 505px;
   line-height: 24px;
+  color: var(--color-lighter-grey);
 }
 
 .inputButton {
@@ -168,7 +181,7 @@ html {
 .headerBestTeams {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   gap: 110px;
 }
 
@@ -177,7 +190,112 @@ html {
 }
 
 .bold {
-    font-weight:  var(--font-weight-600);
+  font-weight: var(--font-weight-600);
+}
+
+.burgerMenu {
+  display: none;
+}
+
+.menuHide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+}
+
+@media screen and (max-width: 900px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
+  }
+
+  .menuHide {
+    display: none;
+  }
+
+  .muneIcon {
+    display: flex;
+    font-size: 28px;
+  }
+
+  .burgerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .burgerText {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .headerBestTeams {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .headerBestTeams img {
+    width: 56px;
+  }
+
+  .slack {
+    display: none;
+  }
+
+  .getAccount {
+    display: none;
+  }
+
+  .getAccount59 {
+    width: 180px;
+    padding: 8px 16px;
+    background-color: rgba(242, 249, 235, 1);
+    color: rgba(53, 65, 75, 1);
+    border-radius: 100px;
+    font-size: 13px;
+    margin-left: 0;
+  }
+
+  .inputButton {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .input {
+    border-radius: 4px;
+    padding: 18px 61px;
+  }
+
+  .tryItFree {
+    border-radius: 4px;
+    margin-left: 0px;
+  }
+
+  .mainPhrase {
+    width: 300px;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  .descriptionHeader {
+    font-size: var(--font-size-16px);
+    color: rgba(78, 90, 101, 1);
+    max-width: 318px;
+    line-height: 24px;
+  }
+
+  .bestTeam {
+    font-size: 11px;
+  }
 }
 
 .Timeline {
@@ -188,22 +306,18 @@ html {
   grid-template-areas: "imgTimeline description";
   background-color: rgba(251, 250, 254, 1);
   margin-top: 100px;
-  padding: 100px 170px;
+  padding: 100px 210px;
 }
 
 .imgTimeline {
   grid-area: imgTimeline;
-  min-width: 650px;
+  max-width: 650px;
   height: auto;
-  grid-column: 1 / 2;
   align-items: center;
 }
 
-
 .description {
-  grid-column: 2 / 3;
   grid-area: description;
-
   max-width: 100%;
   font-size: var(--font-size-16px);
 }
@@ -218,7 +332,7 @@ html {
   background-color: rgba(246, 243, 252, 1);
   max-width: 400px;
   border-bottom: none;
-  border-left: 8px solid rgba(121, 76, 255, 1) ;
+  border-left: 8px solid rgba(121, 76, 255, 1);
 }
 
 .text {
@@ -231,11 +345,12 @@ html {
 
 .textIn {
   padding-bottom: 10px;
+  font-size: var(--font-size-18px);
 }
 
 @media screen and (max-width: 1230px) {
   .Timeline {
-    display: grid; /*тут хотіла уточнити чи потрібно писати це*/
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas:
@@ -250,7 +365,6 @@ html {
     min-width: 450px;
     width: 100%;
     height: auto;
-    
   }
 
   .description {
@@ -258,6 +372,7 @@ html {
     justify-items: center;
     min-width: 350px;
     width: 100%;
+    padding-bottom: 0px;
   }
 
   .text {
@@ -267,56 +382,432 @@ html {
 
   .text:hover {
     border-left: none;
-    border-bottom: 8px solid rgba(121, 76, 255, 1) ;
+    border-bottom: 8px solid rgba(121, 76, 255, 1);
   }
 }
 
-
 .main {
-    display: grid;
-    grid-template-columns: repeat(3, auto) ;
-    grid-template-rows: 40px 1fr 1fr;
-    padding: 100px 165px;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: 40px 1fr 1fr;
+  grid-template-areas:
+    "easier easier easier"
+    "couple couple1 couple2"
+    "couple3 couple4 couple5";
+  padding: 100px 165px;
+  justify-items: center;
 }
-
 
 .easier {
-    grid-column: 1 / 4;
-    align-content: center;
-    text-align: center;
-    font-size: 40px;
-    font-weight: 600;
-    color: rgba(53, 65, 75, 1);
+  grid-column: 1 / 4;
+  grid-area: easier;
+  align-content: center;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  color: rgba(53, 65, 75, 1);
 }
 
+@media screen and (max-width: 600px) {
+  .easier {
+    font-size: var(--font-size-18px);
+  }
+}
+
+.couple {
+  grid-area: couple;
+}
+
+.couple1 {
+  grid-area: couple1;
+}
+
+.couple2 {
+  grid-area: couple2;
+}
+
+.couple3 {
+  grid-area: couple3;
+}
+
+.couple4 {
+  grid-area: couple4;
+}
+
+.couple5 {
+  grid-area: couple5;
+}
 
 .icons {
-    width: 64px;
-    padding-bottom: 24px;
-    padding-top: 80px;
+  width: 64px;
+  padding-bottom: 24px;
+  padding-top: 80px;
 }
 
 .mainHeaders {
-    font-size: 18px;
-    font-weight: var(--font-weight-600);
-    color: rgba(53, 65, 75, 1);
+  font-size: 18px;
+  font-weight: var(--font-weight-600);
+  color: rgba(53, 65, 75, 1);
 }
 
 .mainDesc {
-    font-size: var(--font-size-16px);
-    line-height: 24px;
-    padding-top: 8px;
-    max-width: 300px;
-    color: rgba(78, 90, 101, 1);
+  font-size: var(--font-size-16px);
+  line-height: 24px;
+  padding-top: 8px;
+  max-width: 300px;
+  color: rgba(78, 90, 101, 1);
+}
+
+.buttonInMain {
+  display: none;
 }
 
 @media screen and (max-width: 1230px) {
-    
-/* .main {
+  .main {
     display: grid;
-    grid-template-columns: repeat(2, auto) ;
-    grid-template-rows: 40px 1fr 1fr 1fr;
-} */
-    
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 1fr 1fr 1fr auto;
+    grid-template-areas:
+      "easier"
+      "couple"
+      "couple1"
+      "couple2";
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 60px;
+    padding-top: 56px;
+  }
+
+  .couple3,
+  .couple4,
+  .couple5 {
+    display: none;
+  }
+
+  .easier {
+    min-width: 450px;
+    height: auto;
+  }
+
+  .buttonInMain {
+    margin-top: 40px;
+    display: block;
+    width: 320px;
+    height: 52px;
+    color: rgba(114, 89, 250, 1);
+    background-color: rgba(236, 229, 255, 1);
+    border-radius: 4px;
+    border: none;
+    font-size: var(--font-size-16px);
+  }
+
+  .buttonInMain:hover {
+    cursor: pointer;
+  }
+}
+
+.workEveryday {
+  display: grid;
+  grid-auto-columns: 1fr minmax(400px, 590px);
+  gap: 80px;
+  grid-template-rows: 1fr;
+  grid-template-areas: "workText diagrama";
+  background-color: rgba(251, 250, 254, 1);
+  padding: 100px 210px;
+}
+
+.workText {
+  display: grid;
+  grid-area: workText;
+  align-content: center;
+}
+
+.titleWork {
+  font-size: 40px;
+  color: var(--color-darker-grey);
+  padding-bottom: 24px;
+  font-weight: 600;
+  max-width: 380px;
+  line-height: 48px;
+}
+
+.decsWork {
+  font-size: var(--font-size-16px);
+  color: var(--color-lighter-grey);
+  padding-bottom: 32px;
+  max-width: 380px;
+  line-height: 24px;
+}
+
+.workButton {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(121, 110, 255, 1);
+  border-radius: 4px;
+  padding: 16px 24px;
+  border: none;
+  font-size: var(--font-size-16px);
+  width: 164px;
+}
+
+.workButton:hover {
+  cursor: pointer;
+}
+
+.diagrama {
+  grid-area: diagrama;
+  max-width: 590px;
+  height: auto;
+}
+
+@media screen and (max-width: 1230px) {
+  .workEveryday {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "diagrama"
+      "workText";
+    justify-content: center;
+    padding-top: 32px;
+  }
+
+  .diagrama {
+    display: grid;
+    min-width: 450px;
+    width: 100%;
+    height: auto;
+  }
+
+  .workEveryday {
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+  }
+
+  .workButton {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .workText {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .titleWork {
+    display: grid;
+    justify-items: center;
+    font-size: var(--font-size-18px);
+    width: 170px;
+    line-height: 24px;
+  }
+
+  .decsWork,
+  .workButton {
+    width: 315px;
+  }
+}
+
+.customers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-areas:
+    "customersTitle customersTitle customersTitle"
+    "customersDecs customersDecs customersDecs"
+    "cust1 cust2 cust3";
+  padding: 100px 210px;
+  justify-content: center;
+  justify-items: center;
+  row-gap: 48px;
+}
+
+.customersTitle {
+  grid-area: customersTitle;
+  line-height: 48px;
+  color: var(--color-darker-grey);
+  width: 400px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 40px;
+}
+
+.customersDecs {
+  grid-area: customersDecs;
+  text-align: center;
+  max-width: 520px;
+  font-size: var(--font-size-18px);
+  line-height: 32px;
+  color: var(--color-lighter-grey);
+}
+
+.cust1,
+.cust2,
+.cust3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  border-top: 4px solid transparent;
+  padding: 24px 55px 0 16px;
+}
+
+.cust1:hover,
+.cust2:hover,
+.cust3:hover {
+  border-top: 4px solid var(--color-darker-grey);
+  padding: 24px 55px 0 16px;
+}
+
+.custInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.custInfo div:first-child {
+  font-size: var(--font-size-16px);
+  color: var(--color-lighter-grey);
+  font-weight: 600;
+  padding-bottom: 8px;
+}
+
+.custInfo div:last-child {
+  font-size: var(--font-size-16px);
+}
+
+.customers img {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+}
+
+.cust1 {
+  grid-area: cust1;
+}
+
+.cust2 {
+  grid-area: cust2;
+}
+
+.cust3 {
+  grid-area: cust3;
+}
+
+@media screen and (max-width: 1230px) {
+  .customers {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "customersTitle" "customersDecs" "cust1 cust2";
+  }
+
+  .cust3 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .customers {
+    grid-template-columns: 1fr;
+    grid-template-rows: 48px 1fr 90px;
+    row-gap: 40px;
+  }
+
+  .customersTitle {
+    font-size: var(--font-size-18px);
+    width: 180px;
+    line-height: 24px;
+  }
+
+  .customersDecs {
+    line-height: 32px;
+  }
+
+  .cust1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 35px 0px 35px;
+  }
+
+  .cust3,
+  .cust2 {
+    display: none;
+  }
+
+  .cust1:hover {
+    padding: 24px 35px 0px 35px;
+  }
+}
+
+.downloadButtons {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid transparent;
+  background-color: rgba(121, 110, 255, 1);
+  padding: 64px 80px;
+  margin: auto 165px;
+  border-radius: 16px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.downloadText {
+  display: flex;
+  font-size: 32px;
+  color: white;
+  line-height: 48px;
+  max-width: 430px;
+}
+
+.downloadApps {
+  display: flex;
+  flex-direction: row; 
+  gap: 24px; 
+}
+
+.downloadGoogle {
+  width: 180px;
+  height: 53px;
+}
+
+.downloadAppStore {
+  width: 180px;
+  height: 53px;
+}
+
+@media screen and (max-width: 1230px) {
+  .downloadButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .downloadApps {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    gap: 25px;
+  }
+
+  .downloadText {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .downloadButtons {
+    margin: 0;
+    padding-top: 56px;
+    border-radius: 0px;
+  }
+
+  .downloadText {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+  }
 }

@@ -19,23 +19,30 @@
       <div class="menu">
         <div class="teamFlow">team<span class="dot">.</span>flow</div>
 
-        <div class="menuChoiser">
-          <div>How it Works <i class="arrow fa-solid fa-angle-down"></i></div>
-          <div>Product <i class="arrow fa-solid fa-angle-down"></i></div>
-          <div>Pricing</div>
-          <div>Resources <i class="arrow fa-solid fa-angle-down"></i></div>
+        <div class="menuHide">
+          <div class="menuChoiser">
+            <div>How it Works <i class="arrow fa-solid fa-angle-down"></i></div>
+            <div>Product <i class="arrow fa-solid fa-angle-down"></i></div>
+            <div>Pricing</div>
+            <div>Resources <i class="arrow fa-solid fa-angle-down"></i></div>
+          </div>
+
+          <div class="log">
+            <div class="logIn">Log in</div>
+            <button class="menuButton">Get started free</button>
+          </div>
         </div>
 
-        <div class="log">
-          <div>Log in</div>
-          <button class="menuButton">Get started free</button>
+        <div class="burgerMenu">
+          <i class="fa-solid fa-bars muneIcon"></i>
+          <div class="burgerText">MENU</div>
         </div>
       </div>
 
       <div class="rowSave">
         <div class="getAccount">Save 90%</div>
         <div class="getAccount59">
-          Get account of $59 <i class="fa-solid fa-angle-right"></i>
+          Get account of $59 <i class="fa-solid fa-angle-right rightArrow"></i>
         </div>
       </div>
 
@@ -51,8 +58,8 @@
       </div>
 
       <img src="./assets/Overview.png" alt="Overview" class="mainPageImg" />
-      <div>
-        TRUSTED BY OVER <span class="bold">10.000+</span>+ WORLD’S BEST TEAMS
+      <div class="bestTeam">
+        TRUSTED BY OVER <span class="bold">10.000+</span> WORLD’S BEST TEAMS
       </div>
 
       <div class="headerBestTeams">
@@ -60,7 +67,7 @@
         <img src="./assets/airbnb.png" alt="Airbnb" />
         <img src="./assets/facebook.png" alt="Facebook" />
         <img src="./assets/hubspot.png" alt="Hubspot" />
-        <img src="./assets/slack.png" alt="Slack" />
+        <img src="./assets/slack.png" alt="Slack" class="slack" />
       </div>
     </header>
 
@@ -99,80 +106,132 @@
     <main class="main">
       <div class="easier">Make your work easier</div>
 
-        <div>
-          <img
-            src="./assets/Team.png"
-            alt="Team Surveys & Repotrs"
-            class="icons"
-          />
-          <div class="mainHeaders">Team Surveys & Repotrs</div>
-          <div class="mainDesc">
-            Short, anonymous surveys track your team’s needs weekly so you can
-            focus.
-          </div>
+      <div class="couple">
+        <img
+          src="./assets/Team.png"
+          alt="Team Surveys & Repotrs"
+          class="icons"
+        />
+        <div class="mainHeaders">Team Surveys & Repotrs</div>
+        <div class="mainDesc">
+          Short, anonymous surveys track your team’s needs weekly so you can
+          focus.
         </div>
+      </div>
 
-        <div>
-          <img
-            src="./assets/Collaborative.png"
-            alt="Collaborative"
-            class="icons"
-          />
-          <div class="mainHeaders">Collaborative 1:1</div>
-          <div class="mainDesc">
-            Build relationships by planning 1-on-1s and start meetings.
-          </div>
+      <div class="couple1">
+        <img
+          src="./assets/Collaborative.png"
+          alt="Collaborative"
+          class="icons"
+        />
+        <div class="mainHeaders">Collaborative 1:1</div>
+        <div class="mainDesc">
+          Build relationships by planning 1-on-1s and start meetings.
         </div>
+      </div>
 
-        <div>
-          <img
-            src="./assets/Learning.png"
-            alt="Learning Center"
-            class="icons"
-          />
-          <div class="mainHeaders">Learning Center</div>
-          <div class="mainDesc">
-            Quickly get solutions tailored to your personal challenges from the
-            manager.
-          </div>
+      <div class="couple2">
+        <img src="./assets/Learning.png" alt="Learning Center" class="icons" />
+        <div class="mainHeaders">Learning Center</div>
+        <div class="mainDesc">
+          Quickly get solutions tailored to your personal challenges from the
+          manager.
         </div>
+      </div>
 
-        <div>
-          <img
-            src="./assets/Messaging.png"
-            alt="Anonymous Messaging"
-            class="icons"
-          />
-          <div class="mainHeaders">Anonymous Messaging</div>
-          <div class="mainDesc">
-            Develop trust in a safe channel for important conversations.
-          </div>
+      <div class="couple3">
+        <img
+          src="./assets/Messaging.png"
+          alt="Anonymous Messaging"
+          class="icons"
+        />
+        <div class="mainHeaders">Anonymous Messaging</div>
+        <div class="mainDesc">
+          Develop trust in a safe channel for important conversations.
         </div>
+      </div>
 
-        <div>
-          <img
-            src="./assets/Engine.png"
-            alt="Conversation Engine"
-            class="icons"
-          />
-          <div class="mainHeaders">Conversation Engine</div>
-          <div class="mainDesc">
-            Communicate confidently with recommended talking points.
-          </div>
+      <div class="couple4">
+        <img
+          src="./assets/Engine.png"
+          alt="Conversation Engine"
+          class="icons"
+        />
+        <div class="mainHeaders">Conversation Engine</div>
+        <div class="mainDesc">
+          Communicate confidently with recommended talking points.
         </div>
+      </div>
 
-        <div>
-          <img
-            src="./assets/Exciusives.png"
-            alt="Exclusives Manager"
-            class="icons"
-          />
-          <div class="mainHeaders">Exclusives Manager</div>
-          <div class="mainDesc">
-            Access manager tips, activities and best practices from our team of
-            experts.
-          </div>
+      <div class="couple5">
+        <img
+          src="./assets/Exciusives.png"
+          alt="Exclusives Manager"
+          class="icons"
+        />
+        <div class="mainHeaders">Exclusives Manager</div>
+        <div class="mainDesc">
+          Access manager tips, activities and best practices from our team of
+          experts.
         </div>
+      </div>
+      <button class="buttonInMain">View more benefits</button>
     </main>
+
+    <div class="workEveryday">
+      <div class="workText">
+        <div class="titleWork">We work how you work everyday</div>
+        <div class="decsWork">
+          Since the easiest things to use actually get used, we adapts to the
+          way your team works – not the other way around.
+        </div>
+        <button class="workButton">Get started free</button>
+      </div>
+      <img src="./assets/diagramas.png" alt="Diagrama" class="diagrama" />
+    </div>
+
+    <div class="customers">
+      <div class="customersTitle">Why customers love working with us</div>
+      <div class="customersDecs">
+        “It's amazing what has helped me learn about my team. I don't worry
+        about blindspots anymore, and 1-on-1s have never been more productive.
+        The team loves it.”
+      </div>
+
+      <div class="cust1">
+        <img src="./assets/customers/1.png" alt="Jorge Robertson" />
+        <div class="custInfo">
+          <div>Jorge Robertson</div>
+          <div>CS at Google</div>
+        </div>
+      </div>
+
+      <div class="cust2">
+        <img src="./assets/customers/2.png" alt="Francisco Bell" />
+
+        <div class="custInfo">
+          <div>Francisco Bell</div>
+          <div>Designer at Microsoft</div>
+        </div>
+      </div>
+
+      <div class="cust3">
+        <img src="./assets/customers/3.png" alt="Beth Fox" />
+        <div class="custInfo">
+          <div>Beth Fox</div>
+          <div>Developer at Airbnb</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="downloadButtons">
+      <div class="downloadText">84% of employees who use trust their direct manager</div>
+      <div class="downloadApps">
+        <img src="./assets/custVits/google.png" alt="GooglePay" class="downloadGoogle" />
+      <img src="./assets/custVits/AppStore.png" alt="AppStore" class="downloadAppStore" />
+      </div>
+      
+    </div>
   </body>
 </html>
